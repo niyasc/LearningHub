@@ -11,8 +11,20 @@
     <header>
       <h1>LearnHub - <span>One stop learning portal!</span></h1>
     </header>
-    <input type="text" ng-model="search.FIELD2" placeholder="Search by title" class="form-control" id="searchForm"/>
-    <div ng-repeat="course in courses | filter:search" class="row course">
+    <div class="search-area">
+
+      <div class="form-group">
+        <input type="text" ng-model="search.FIELD2" placeholder="Search by title" class="form-control" id="searchForm"/>
+      </div>
+
+      <div class="form-group">
+        <label for="sort">Sort By</label>
+        <input ng-model="sort" name="sort" type="radio" value="FIELD5" class="">Price</input>
+        <input ng-model="sort" name="sort" type="radio" value="FIELD8" class="">Rating</input>
+      </div>
+      Showing {{results.length}} courses
+    </div>
+    <div ng-repeat="course in courses | filter:search |orderBy:sort:true as results" class="row course">
       <div class="col-md-3">
 
         <img class="thumbnail" ng-src="{{course.FIELD3}}" />
@@ -37,21 +49,27 @@
         <div class="row">
           <div class="col-sm-9">
             <h2>{{course.FIELD2}}</h2>
+            <p class="description">
+              {{course.FIELD9}}
+            </p>
           </div>
           <div class="col-sm-3 type-container">
             <span class="type">{{course.FIELD6}}</span>
+            <div class="price">
+              {{course.FIELD5}}
+            </div>
           </div>
         </div>
 
       </div>
 
     </div>
-    <footer>
-      &copy; XYZ Private Ltd 2016
-    </footer>
-  </div>
-  <script src="js/lib/angular.min.js"></script>
-  <script src="js/learningHub.js"></script>
+  <footer>
+    &copy; XYZ Private Ltd 2016
+  </footer>
+</div>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/learningHub.js"></script>
 </body>
 
 </html>

@@ -7,12 +7,19 @@ h1 span {
 header {
   border-bottom: 1px solid grey;
 }
-
+.search-area {
+  margin: 10px;
+  text-align: center;
+}
 #searchForm {
   max-width: 320px;
   margin: 5px;
   font-size: 20px;
   border-radius: 0;
+  margin: auto;
+}
+#searchForm .form-control, #searchForm input[type="radio"] {
+  display: inline;
 }
 
 .course {
@@ -48,7 +55,9 @@ ul.rating {
 .extlink {
   text-align: right;
 }
-
+.description {
+  font-size: 18px;
+}
 .type-container {
   margin-top: 30px;
 }
@@ -58,6 +67,13 @@ span.type {
   padding: 5px;
   border-radius: 5px;
 }
+.price {
+  padding: 10px 0;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /*Footer*/
 footer {
   height: 20px;
