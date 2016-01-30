@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>LearnHub - a simplified courses search portal!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet"/>
+
+</head>
+<body ng-app="learningHub">
+  <div ng-controller="CourseController" class="container">
+    <header>
+      <h1>LearnHub - <span>One stop learning portal!</span></h1>
+    </header>
+    <input type="text" ng-model="search.FIELD2" placeholder="Search by title" class="form-control" id="searchForm"/>
+    <div ng-repeat="course in courses | filter:search" class="row course">
+      <div class="col-md-3">
+
+        <img class="thumbnail" ng-src="{{course.FIELD3}}" />
+        <div class="row">
+          <div class="col-xs-7">
+
+
+            <div star-rating rating-value="course.FIELD8" max="5" ></div>
+          </div>
+          <div class="col-xs-5">
+
+
+            <div class="extlink">
+              <a href="{{course.FIELD4}}" target="_blank">
+                <span class="glyphicon glyphicon-paperclip"> extLink</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-sm-9">
+            <h2>{{course.FIELD2}}</h2>
+          </div>
+          <div class="col-sm-3 type-container">
+            <span class="type">{{course.FIELD6}}</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <footer>
+      &copy; XYZ Private Ltd 2016
+    </footer>
+  </div>
+  <script src="js/lib/angular.min.js"></script>
+  <script src="js/learningHub.js"></script>
+</body>
+
+</html>

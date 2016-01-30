@@ -1,0 +1,67 @@
+h1 span {
+  font-size: 20px;
+  color: grey;
+  vertical-align: middle;
+}
+
+header {
+  border-bottom: 1px solid grey;
+}
+
+#searchForm {
+  max-width: 320px;
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 0;
+}
+
+.course {
+  padding: 5px;
+  margin: 20px 0;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+.thumbnail {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  max-width: 250px;
+  margin: auto;
+}
+.rating {
+  text-align: center;
+  font-size: 20px;
+}
+ul.rating {
+  padding-left: 0;
+}
+.rating li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  display: inline;
+}
+.rating .filled {
+  color: gold;
+}
+
+.extlink {
+  text-align: right;
+}
+
+.type-container {
+  margin-top: 30px;
+}
+span.type {
+  background: #ddd;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+}
+/*Footer*/
+footer {
+  height: 20px;
+  text-align: center;
+  background: #33363B;
+  color: white;
+}
